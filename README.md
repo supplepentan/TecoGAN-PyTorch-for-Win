@@ -2,7 +2,7 @@
 
 ### Introduction
 
-This is a PyTorch reimplementation of **TecoGAN**: **Te**mporally **Co**herent **GAN** for Video Super-Resolution (VSR). Please refer to the official TensorFlow implementation [TecoGAN-TensorFlow](https://github.com/thunil/TecoGAN) for more information.
+This is a reimplementation of **TecoGAN** (Temporally Coherent GAN) for Video Super-Resolution (VSR) on Windows environment. Please refer to the official TensorFlow implementation [TecoGAN-TensorFlow](https://github.com/thunil/TecoGAN) and [TecoGAN-PyTorch](https://github.com/skycrapers/TecoGAN-PyTorch) for more information.
 
 <p align = "center">
     <img src="resources/fire.gif" width="320" />
@@ -16,7 +16,7 @@ This is a PyTorch reimplementation of **TecoGAN**: **Te**mporally **Co**herent *
 
 ### Updates
 
-- 08/2023: Fork from TecoGAN-PyTorch
+- 08/2023: Forked from TecoGAN-PyTorch
 
 #### Original TecoGAN-PyTorch
 
@@ -97,16 +97,16 @@ python ./scripts/download/download_models.py BD TecoGAN
 python ./codes/main.py --exp_dir ./experiments_BD/TecoGAN/TecoGAN_VimeoTecoGAN_4xSR_2GPU --mode test --opt test.yml --gpu_ids 1
 ```
 
-4. Evaluate the upsampled results using the official metrics. These codes are borrowed from [TecoGAN-TensorFlow](https://github.com/thunil/TecoGAN), with minor modifications to adapt to the BI degradation.
+4. Evaluate the upsampled results using the official metrics. These codes are borrowed from [TecoGAN-TensorFlow](https://github.com/thunil/TecoGAN), with minor modifications to adapt to the BI degradation. (under adjustment)
 
 ```bash
 python ./codes/official_metrics/evaluate.py -m TecoGAN_4x_BD_Vimeo_iter500K
 ```
 
-5. Profile model (FLOPs, parameters and speed). You can modify the last argument to specify the size of the LR video.
+5. Profile model (FLOPs, parameters and speed). You can modify the last argument to specify the size of the LR video. (under adjustment)
 
 ```bash
-bash ./profile.sh BD TecoGAN/TecoGAN_VimeoTecoGAN_4xSR_2GPU 3x134x320
+python ./profile.py BD TecoGAN/TecoGAN_VimeoTecoGAN_4xSR_2GPU 3x134x320
 ```
 
 ## Training
