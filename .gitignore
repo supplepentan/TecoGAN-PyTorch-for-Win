@@ -1,3 +1,4 @@
+*.pyc
 /venv
 usage.txt
 
@@ -7,3 +8,6 @@ usage.txt
 /pretrained_models/FRVSR_BI_iter400000.pth
 /pretrained_models/TecoGAN_BD_iter500000.pth
 /pretrained_models/TecoGAN_BI_iter500000.pth
+/pretrained_models/TecoGAN_4x_BD_Vimeo_iter500K.pth
+
+/results
