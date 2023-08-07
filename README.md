@@ -41,7 +41,7 @@ This is a PyTorch reimplementation of **TecoGAN**: **Te**mporally **Co**herent *
 
 ## Dependencies
 
-- Ubuntu >= 16.04
+- Windows
 - NVIDIA GPU + CUDA
 - Python >= 3.7
 - PyTorch >= 1.4.0
@@ -186,34 +186,6 @@ python ./scripts/monitor_training.py -dg BD -m TecoGAN/TecoGAN_VimeoTecoGAN_4xSR
 > <sup>[1]</sup> FLOPs & speed are computed on RGB sequence with resolution 134\*320 on a single NVIDIA 1080Ti GPU. \
 > <sup>[2]</sup> Both FRVSR & TecoGAN use 10 residual blocks, while TecoGAN+ has 16 residual blocks.
 
-## License & Citation
-
-If you use this code for your research, please cite the following paper and our project.
-
-```tex
-@article{tecogan2020,
-  title={Learning temporal coherence via self-supervision for GAN-based video generation},
-  author={Chu, Mengyu and Xie, You and Mayer, Jonas and Leal-Taix{\'e}, Laura and Thuerey, Nils},
-  journal={ACM Transactions on Graphics (TOG)},
-  volume={39},
-  number={4},
-  pages={75--1},
-  year={2020},
-  publisher={ACM New York, NY, USA}
-}
-```
-
-```tex
-@misc{tecogan_pytorch,
-  author={Deng, Jianing and Zhuo, Cheng},
-  title={PyTorch Implementation of Temporally Coherent GAN (TecoGAN) for Video Super-Resolution},
-  howpublished="\url{https://github.com/skycrapers/TecoGAN-PyTorch}",
-  year={2020},
-}
-```
-
 ## Acknowledgements
 
-This code is built on [TecoGAN-TensorFlow](https://github.com/thunil/TecoGAN), [BasicSR](https://github.com/xinntao/BasicSR) and [LPIPS](https://github.com/richzhang/PerceptualSimilarity). We thank the authors for sharing their codes.
-
-If you have any questions, feel free to email me `jn.deng@foxmail.com`
+This code is built on [TecoGAN-PyTorch](https://github.com/skycrapers/TecoGAN-PyTorch), [TecoGAN-TensorFlow](https://github.com/thunil/TecoGAN), [BasicSR](https://github.com/xinntao/BasicSR) and [LPIPS](https://github.com/richzhang/PerceptualSimilarity). We thank the authors for sharing their codes.
