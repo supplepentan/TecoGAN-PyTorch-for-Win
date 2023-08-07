@@ -1,1 +1,9 @@
 /venv
+usage.txt
+
+/data/ToS3
+/data/Vid4
+/pretrained_models/FRVSR_BD_iter400000.pth
+/pretrained_models/FRVSR_BI_iter400000.pth
+/pretrained_models/TecoGAN_BD_iter500000.pth
+/pretrained_models/TecoGAN_BI_iter500000.pth
