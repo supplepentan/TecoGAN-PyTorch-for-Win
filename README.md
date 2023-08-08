@@ -99,6 +99,18 @@ python ./scripts/download/download_models.py BD TecoGAN
 
 > You can download the model from [[BD-4x-Vimeo](https://drive.google.com/file/d/13FPxKE6q7tuRrfhTE7GB040jBeURBj58/view?usp=sharing)][[BI-4x-Vimeo](https://drive.google.com/file/d/1ie1F7wJcO4mhNWK8nPX7F0LgOoPzCwEu/view?usp=sharing)][[BD-4x-REDS](https://drive.google.com/file/d/1vMvMbv_BvC2G-qCcaOBkNnkMh_gLNe6q/view?usp=sharing)][[BD-2x-REDS](https://drive.google.com/file/d/1XN5D4hjNvitO9Kb3OrYiKGjwNU0b43ZI/view?usp=sharing)], and put it under `./pretrained_models`.
 
+These tags represent different configurations used during the training or testing of TecoGAN. Each tag specifies the dataset being used, the degradation model applied, and the scale of super-resolution.
+
+**[BD-4x-Vimeo]**: In this configuration, the Vimeo dataset is used with a BD (Blur and Downsample) degradation model, and a 4x super-resolution is applied.
+
+**[BI-4x-Vimeo]**: In this configuration, the Vimeo dataset is used with a BI (Bicubic Interpolation) degradation model, and a 4x super-resolution is applied.
+
+**[BD-4x-REDS]**: In this configuration, the REDS dataset is used with a BD degradation model, and a 4x super-resolution is applied.
+
+**[BD-2x-REDS]**: In this configuration, the REDS dataset is used with a BD degradation model, and a 2x super-resolution is applied.
+
+These configurations can be chosen according to the specific task or requirements. For example, if a 4x super-resolution is needed and the expected degradation is blur and downsample, the [BD-4x-Vimeo] or [BD-4x-REDS] configuration would be suitable. If the model's performance on a specific dataset (Vimeo or REDS) is to be evaluated, then the respective dataset configuration is chosen.
+
 3. Run TecoGAN for 4x SR. The results will be saved in `./results`.
 
 ```bash
