@@ -1,3 +1,4 @@
+absl-py==1.4.0
 asttokens==2.2.1
 backcall==0.2.0
 beautifulsoup4==4.12.2
@@ -30,6 +31,7 @@ networkx==3.0
 numpy==1.24.4
 opencv-python==4.8.0.74
 packaging==23.1
+pandas==2.0.3
 parso==0.8.3
 pathspec==0.11.2
 pickleshare==0.7.5
@@ -41,6 +43,7 @@ Pygments==2.16.1
 pyparsing==3.0.9
 PySocks==1.7.1
 python-dateutil==2.8.2
+pytz==2023.3
 PyWavelets==1.4.1
 PyYAML==6.0.1
 requests==2.31.0
@@ -57,6 +60,7 @@ torchvision==0.15.2+cu117
 tqdm==4.65.0
 traitlets==5.9.0
 typing_extensions==4.4.0
+tzdata==2023.3
 urllib3==2.0.4
 wcwidth==0.2.6
 zipp==3.16.2
