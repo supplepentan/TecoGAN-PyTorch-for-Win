@@ -97,10 +97,10 @@ python ./scripts/download/download_models.py BD TecoGAN
 python ./codes/main.py --exp_dir ./experiments_BD/TecoGAN/TecoGAN_VimeoTecoGAN_4xSR_2GPU --mode test --opt test.yml --gpu_ids 1
 ```
 
-4. Evaluate the upsampled results using the official metrics. These codes are borrowed from [TecoGAN-TensorFlow](https://github.com/thunil/TecoGAN), with minor modifications to adapt to the BI degradation. (under adjustment)
+4. Evaluate the upsampled results using the official metrics. These codes are borrowed from [TecoGAN-TensorFlow](https://github.com/thunil/TecoGAN), with minor modifications to adapt to the BI degradation.
 
 ```bash
-python ./codes/official_metrics/evaluate.py -m TecoGAN_4x_BD_Vimeo_iter500K
+python ./codes/official_metrics/evaluate.py --model TecoGAN_4x_BD_Vimeo_iter500K
 ```
 
 5. Profile model (FLOPs, parameters and speed). You can modify the last argument to specify the size of the LR video. (under adjustment)
