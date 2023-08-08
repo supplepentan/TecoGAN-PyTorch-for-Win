@@ -103,7 +103,7 @@ python ./codes/main.py --exp_dir ./experiments_BD/TecoGAN/TecoGAN_VimeoTecoGAN_4
 python ./codes/official_metrics/evaluate.py --model TecoGAN_4x_BD_Vimeo_iter500K
 ```
 
-5. Profile model (FLOPs, parameters and speed). You can modify the last argument to specify the size of the LR video. (under adjustment)
+5. Profile model (FLOPs, parameters and speed). You can modify the last argument to specify the size of the LR video.
 
 ```bash
 python ./profile.py BD TecoGAN/TecoGAN_VimeoTecoGAN_4xSR_2GPU 3x134x320
