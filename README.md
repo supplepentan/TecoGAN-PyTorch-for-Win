@@ -50,7 +50,7 @@ This is a reimplementation of **TecoGAN** (Temporally Coherent GAN) for Video Su
 
 ## Testing
 
-**Note:** We apply different models according to the degradation type. The following steps are for `4xSR` under `BD` degradation. You can switch to `2xSR` or `BI` degradation by replacing all `4x` to `2x` and `BD` to `BI` below.
+**Note:** In the context of TecoGAN, two degradation models, "BI degradation" and "BD degradation", are used. BI (Bicubic Interpolation) degradation refers to a degradation model that uses bicubic interpolation when down-sampling an image to lower resolution. On the other hand, BD (Blur and Downsample) degradation refers to a degradation model that blurs the image before down-sampling. These different degradation models are used in the training and evaluation of TecoGAN. The following steps are for `4xSR` under `BD` degradation. You can switch to `2xSR` or `BI` degradation by replacing all `4x` to `2x` and `BD` to `BI` below.
 
 1. Download the official Vid4 and ToS3 datasets. In `BD` mode, only ground-truth data is needed.
 
@@ -95,6 +95,20 @@ python ./scripts/download/download_models.py BD TecoGAN
 
 ```bash
 python ./codes/main.py --exp_dir ./experiments_BD/TecoGAN/TecoGAN_VimeoTecoGAN_4xSR_2GPU --mode test --opt test.yml --gpu_ids 1
+```
+
+```tex
+
+Options
+
+--exp_dir ./experiments_BD/TecoGAN/TecoGAN_VimeoTecoGAN_4xSR_2GPU: Specifies the directory where the experiment settings are stored. This directory includes the model settings, dataset settings, etc.
+
+--mode test: Sets the mode to test mode. This means the model will be run for evaluation, and no new training will be conducted.
+
+--opt test.yml: Specifies the YAML file that contains the settings for the test. This file includes the dataset to be used for the test, model parameters, degradation models, etc.
+
+--gpu_ids 1: Specifies the ID of the GPU to be used. In this example, the GPU with ID 1 is used.
+
 ```
 
 4. Evaluate the upsampled results using the official metrics. These codes are borrowed from [TecoGAN-TensorFlow](https://github.com/thunil/TecoGAN), with minor modifications to adapt to the BI degradation.
